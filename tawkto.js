@@ -48,7 +48,7 @@ async function CallZap(id){
 
 }
 
-const WEBHOOK_SECRET = 'webhook secret key';
+const WEBHOOK_SECRET = '8a41d2c03a6e4152faa35dd7b0f88de4a48171fc2374ca63c3ce8792868455f9c014b2579310d7248228de6e4c3e418a';
 
 function verifySignature (body, signature) {
     const digest = crypto
