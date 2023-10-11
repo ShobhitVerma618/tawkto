@@ -61,9 +61,11 @@ app.post('/webhooks', function (req, res, next) {
     if (!verifySignature(req.rawBody, req.headers['x-tawk-signature'])) {
         // verification failed
         console.log('error occured');
+        res.send(200).send('verification failed');
     }
     // verification success
     console.log(res.body);
+    res.status(200).send('webhook received successfully');
 });
 
 // Start the Express server
